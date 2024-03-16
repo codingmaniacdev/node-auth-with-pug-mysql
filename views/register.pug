@@ -1,0 +1,57 @@
+extends layout
+
+block content
+  div.wrapper 
+    if(status === false)
+      div.alert.alert-danger
+        p= message
+
+    if(status === true)
+      div.alert.alert-success
+        p= message
+    div.card
+      h1.card-title Create An Account
+      div.card-body
+        form(action="/store" method="POST")
+          div.form-group
+            label(for="name") Name
+            input(type="text" name="name" class="input-control" placeholder="Name")
+            if (errors && errors.some(error => error.path === 'name'))
+              small.text-danger= errors.find(error => error.path === 'name').msg
+
+
+          div.form-group
+            label(for="email") Email Address
+            input(type="text" name="email" class="input-control" placeholder="Email Address")
+            if(errors && errors.some(error => error.path === 'email'))
+              small.text-danger= errors.find(error => error.path === 'email').msg
+
+
+          div.form-group
+            label(for="password") Password
+            input(type="password" name="password" class="input-control" placeholder="Password")
+            if(errors && errors.some(error => error.path === 'password'))
+              small.text-danger= errors.find(error => error.path === 'password').msg
+
+          div.form-group
+            label(for="password") Confirm Password
+            input(type="password" name="confirm_password" class="input-control" placeholder="Confirm Password")
+            if(errors && errors.some(error => error.path === 'confirm_password'))
+              small.text-danger= errors.find(error => error.path === 'confirm_password').msg
+
+          div.form-group
+            label.checkbox-container
+              input(type="checkbox" name="rememberMe" class="remember-me-checkbox")
+              | Remember Me
+
+
+
+          div.form-group
+            button(name="login" class="btn") Login
+
+          div.form-group
+            div.separate
+              Already Have An Account !
+                a(href="/")  Login Now
+
+        

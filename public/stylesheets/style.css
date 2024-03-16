@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@200;300;400&display=swap');
+
+body {
+  padding: 50px;
+  font: 14px 'Albert Sans', sans-serif;
+  ;
+}
+
+a {
+  color: #00B7FF;
+}
+.wrapper {
+  width: 450px;
+  margin-top: 25px;
+  margin: 0 auto;
+}
+.card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 2px;
+  padding: 25px 25px;
+  border-radius: 10px;
+}
+
+h1.card-title {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group small.text-danger {
+  color: #e94444;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input.input-control {
+  padding: 14px;
+  font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+}
+
+.form-group .btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #7EC72B;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font: 16px 'Albert Sans', sans-serif;;
+}
+
+.separate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.separate a{
+  text-decoration: none;
+}
+
+.alert {
+  padding: 5px 20px;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.alert-success {
+  background: #7ec72b;
+  border: 1px solid #6ac700;
+  color: #fff;
+}
+
+.alert-warning {
+  background: #ffe554;
+  border: 1px solid hsl(50.88deg 100% 57.76%);
+  color: #404040;
+}
+
+.alert-danger {
+  background: rgb(255, 95, 84);
+    border: 1px solid hsl(3.86deg 100% 61.21%);
+    color: #fff;
+}
+
+/* Style the table */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 16px;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.styled-table th {
+  background-color: #f2f2f2;
+}
+
+/* Highlight alternate rows for better readability */
+.styled-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Add hover effect on rows */
+.styled-table tbody tr:hover {
+  background-color: #e0e0e0;
+}

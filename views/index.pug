@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  div.wrapper
+    if(status === false)
+      div.alert.alert-danger
+        p= message
+
+    div.card
+      h1.card-title Login
+      div.card-body
+        form(action="/authenticate" method="POST")
+          div.form-group
+            label(for="email") Email Address
+            input(type="text" name="email" class="input-control" placeholder="Email Address")
+            if(errors && errors.some(error => error.path === 'email'))
+              small.text-danger= errors.find(error => error.path === 'email').msg
+
+
+          div.form-group
+            label(for="password") Password
+            input(type="password" name="password" class="input-control" placeholder="Password")
+            if(errors && errors.some(error => error.path === 'password'))
+              small.text-danger= errors.find(error => error.path === 'password').msg
+
+          div.form-group
+            label.checkbox-container
+              input(type="checkbox" name="rememberMe" class="remember-me-checkbox")
+              | Remember Me
+
+
+
+          div.form-group
+            button(name="login" class="btn") Login
+
+          div.form-group
+            div.separate
+              a(href="/forgot-password") Forgot Password 
+              a(href="/register") Create An Account
+
+        
